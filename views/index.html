@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <title>Document</title>
+</head>
+<body style="background-color: #F9F9F9;">
+    <div style="padding-top: 3em;"></div>
+    <div class="ui container">
+        <form action="" id="login_form" class="ui very padded form segment" style="margin: 0 auto; max-width: 400px;">
+            <div class="content">
+                <div class="field">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Username"> 
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="field">
+                    <a href="">Forgot Password?</a>
+                </div>
+                
+                <div class="field">
+                   
+                    <button type="submit" class="ui button primary" name="loginbtn">Login</button>
+                    <button type="submit" class="ui button" name="loginbtn">Register</button>
+                </div>
+            </div> 
+        </form>
+    </div>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqtG02bxsfboJXOGbfjJHbuH77m-cfjzY",
+            authDomain: "basic-library.firebaseapp.com",
+            databaseURL: "https://basic-library.firebaseio.com",
+            projectId: "basic-library",
+            storageBucket: "basic-library.appspot.com",
+            messagingSenderId: "163306718047",
+            appId: "1:163306718047:web:e8bf442c1e48b43860ecea",
+            measurementId: "G-39RG2TWCBD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+        const db = firebase.firestore()
+        // db.settings({ timestampsInSnapshots: true })
+    </script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

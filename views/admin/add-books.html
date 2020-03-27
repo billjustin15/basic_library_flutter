@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+    <title>Document</title>
+</head>
+<body style="background-color: #F9F9F9;">
+    <div style="padding-top: 3em;"></div>
+    <form id="add_book_form" action="" class="ui very padded small form segment" style="max-width: 700px; margin: 0 auto;">
+        <div class="two fields">
+            <div class="field">
+                <label for="">Book Title</label>
+                <input type="text" name="title" placeholder="Put an amazing book here">
+            </div>
+            <div class="field">
+                <label for="">Author</label>
+                <input type="text" name="author" placeholder="Is this your favorite author?">
+            </div>
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <textarea name="description"cols="30" rows="10" placeholder="Make them think it's a good read"></textarea>
+        </div>
+        <div class="field">
+            <button class="ui small button primary">Add This Book</button>
+        </div>
+    </form>
+    
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBqtG02bxsfboJXOGbfjJHbuH77m-cfjzY",
+        authDomain: "basic-library.firebaseapp.com",
+        databaseURL: "https://basic-library.firebaseio.com",
+        projectId: "basic-library",
+        storageBucket: "basic-library.appspot.com",
+        messagingSenderId: "163306718047",
+        appId: "1:163306718047:web:e8bf442c1e48b43860ecea",
+        measurementId: "G-39RG2TWCBD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore()
+    // db.settings({ timestampsInSnapshots: true })
+</script>
+<script src="../../js/admin/books.js"></script>
+</body>
+</html>
